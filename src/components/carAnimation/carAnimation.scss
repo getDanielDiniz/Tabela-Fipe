@@ -1,0 +1,42 @@
+.carAnimation{
+    --front-line-color: #446AEE;
+    --back-line-color: #fff;
+    --car-width:5vw;
+    --initial-position:calc(-50% + 13vw - 1rem);
+    
+    position: relative;
+    left: calc(var(--initial-position)/ var(--i));
+    width: 200%;
+    height: calc(var(--car-width)*2);//Calculado com base no aspect ratio da img
+    transition: 2s ease-in-out;
+
+    img{
+        position: absolute;
+        rotate: 90deg;
+        width: var(--car-width);
+        left: calc(50% - var(--car-width)/2); //centraliza a imagem no container
+        aspect-ratio: 1/2;
+        z-index: 2;
+    }
+}
+
+.carAnimation::after,
+.carAnimation::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: calc(100vw - var(--car-width) + 1vw);
+}
+
+.carAnimation::before{
+    left: 0;
+    border-top: var(--back-line-color) 1px dashed;
+}
+
+.carAnimation::after{
+    right: 0;
+    border-top: var(--front-line-color) 1px solid;
+
+}

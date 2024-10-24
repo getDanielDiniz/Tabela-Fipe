@@ -1,0 +1,23 @@
+.saveButton{
+    position: absolute;
+    right: 2vmax;
+    top: 2vmax;
+    z-index: 3;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+
+    img{
+
+        width: 1.5rem;
+    }
+}
+
+.saveButton:hover{
+    transform: scale(1.2);
+}
+
+.saveButton:active{
+    transform: scale(0.8);
+}

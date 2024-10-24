@@ -1,0 +1,11 @@
+@media (max-width:768px) {
+    .carAnimation{
+        --car-width:10vw;
+        --initial-position:calc(-50% + 18vw - 1rem);
+    }
+}
+@media (max-width:1400px) {
+    .carAnimation{
+        margin-top: 100px;
+    }
+}

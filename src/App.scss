@@ -1,0 +1,32 @@
+*{
+    --text-color: #c0c0c0;
+    --bg-color: #2f2f2f;
+
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.activeBody{
+    overflow: hidden;
+}
+
+.container-home{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+
+    .container-dropdown{
+        display: flex;
+        width: 100%;
+        gap: 5vw;
+        border-bottom: #6f6f6f 1px solid;
+        align-self: flex-start;
+    }
+}

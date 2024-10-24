@@ -1,0 +1,66 @@
+.dashboard{
+    --width-container : 95%;
+    --numero-colunas : 3;
+    --gap:1rem;
+    --gap-total : calc(var(--gap) * (var(--numero-colunas) - 1));
+    --width-card: calc(var(--width-container) / var(--numero-colunas) - var(--gap-total) );
+
+    width: var(--width-container);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    border-radius: 5px;
+    border: 1px solid #a0a0a0;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: linear-gradient(rgba(30 , 30 , 30, 30%), rgba(47,47,47, 80%) 80%);
+    
+    .card-dashboard{
+        position: relative;
+        display: flex;
+        padding: 1.5rem 1rem;
+        flex-direction: column;
+        width: var(--width-card);
+        gap: 1rem;
+        font-size: .8rem;
+        border: 1px solid #a0a0a0;
+        border-radius: 5px;
+        span{
+            text-transform: uppercase;
+            text-wrap: wrap;
+        }
+        transition: .3s .5s;
+    }
+
+    p{
+        width: 100%;
+        text-align: center;
+        color: #8f8f8f;
+    }
+}
+
+.card-dashboard::before{
+    content: var(--valor);
+    display: flex;
+    transform: rotateX(90deg);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #6F2C2F;
+    transition: transform .5s, color .2s .3s;
+}
+
+.card-dashboard:hover::before {
+    transform: rotate(0deg);
+    color: #fff;
+}
+
+.card-dashboard:hover {
+    color: transparent;
+}
